@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS APPLICATION</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- import google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    
+    <nav>
+
+        <div class="main-nav container flex">
+            <!-- adding logo -->
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="./Logo (1) (1).png" alt="newslogo">
+            </a>
+
+            <!-- creating nav links -->
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('ipl')">IPL</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance </li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                </ul>
+            </div>
+
+            <!-- creating search bar -->
+            <div class="search-bar flex">
+
+                <input type="text" class="news-input" placeholder="e.g. Travel" id="search-text">
+
+                <!--creating search button  -->
+                <button class="search-button" id="search-button">Search</button>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container">
+
+        </div>
+    </main>
+
+        <template id="template-news-card">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://www.shutterstock.com/shutterstock/photos/1928997539/display_1500/stock-vector-breaking-news-template-with-d-red-and-blue-badge-breaking-news-text-on-dark-blue-with-earth-and-1928997539.jpg " alt="news image" id="news-img" width="400px" height="200px">
+
+                </div>
+
+                <div class="card-content">
+                    <h3 id="news-title">THIS IS THE TITLE</h3>
+                    <h6 class="news-source" id="news-source">END GADGET 26/08/2023</h6>
+                    <p class="news-desc" id="news-desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis velit maiores porro molestias sequi, cumque harum temporibus consectetur ipsam fugiat.</p>
+                    
+                </div>
+
+            </div>
+        </template>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
